@@ -4,7 +4,7 @@ Introductory paragraph (replace this with your text)
 
 ## Summary
 
-Briefly summarize the regex you will be describing and what you will explain. Include a code snippet of the regex. Replace this text with your summary.
+A regular expression is a string which matches the pattern. You can search and replace the strings using RegEx effectively. For example, if you want to convert the phone number format from xxx-xx-xxxx to xxxxxxxxx, regEx would be handy. Another example, if you want to replace Hello! with Hola! in 1000 places, RegEx is very useful. We will see some of the RegEx and examples in the following pages.
 
 ## Table of Contents
 
@@ -50,6 +50,21 @@ Quantifier	Description
 { n , m }	Match from n to m times.
 
 ### OR Operator
+
+The '|' operator helps to match one of the string. Please see the following examples
+
+
+"hi|hello"
+
+matches a string that has either "hi" or "hello" in it
+
+"(b|cd)ef"
+
+a string that has either "bef" or "cdef"
+
+"(a|b)*c"
+
+a string that has a sequence of alternating a's and b's ending in a c
 
 ### Character Classes
 A character class allows you to match any symbol from a certain character set. A character class is also called a character set.
@@ -102,6 +117,26 @@ a string that has a single digit before a percent sign
 a string that ends in a comma followed by an alphanumeric character
 
 ### Greedy and Lazy Match
+
+In the greedy mode, quantifiers try to match as many as possible and return the largest matches. When quantifiers use the greedy mode, they are called greedy quantifiers. In the quantifier tutorial, you learned how to work with greedy quantifiers such as *, +, and ?.
+
+Besides the greedy mode, quantifiers also work in the non-greedy mode or lazy mode. In the lazy mode, the quantifiers match their preceding elements as few as possible and return the smallest matches. When quantifiers use the lazy mode, they’re often referred to as non-greedy quantifiers or lazy quantifiers.
+
+Greedy quantifier	Lazy quantifier	Meaning
+*	*?	Match its preceding element zero or more times.
++	+?	Match its preceding element one or more times.
+?	??	Match its preceding element zero or one time.
+{ n }	{ n }?	Match its preceding element exactly n times.
+{ n ,}	{ n ,}?	Match its preceding element at least n times.
+{ n , m }	{ n , m }?	Match its preceding element from n to m times.
+
+Example: The following program uses the non-greedy quantifier (+?) to match the text within the quotes ("") of a button element. The output of the following example is ['"submit"', '"btn"']
+
+const s = '<button type="submit" class="btn">Send</button>'
+const pattern = /".+?"/g;
+
+const result = s.match(pattern)
+console.log(result);
 
 ### Boundaries
 
