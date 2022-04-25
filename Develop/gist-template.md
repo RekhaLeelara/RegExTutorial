@@ -53,7 +53,6 @@ Quantifier	Description
 
 The '|' operator helps to match one of the string. Please see the following examples
 
-
 "hi|hello"
 
 matches a string that has either "hi" or "hello" in it
@@ -80,6 +79,16 @@ let phoneNo = numbers.join('');
 console.log(phoneNo);
 
 ### Flags
+
+A flag is an optional parameter to a regex that modifies its behavior of searching. A flag is denoted using a single lowercase alphabetic character. The following are flag types and definitions.
+
+Flag	Name	Modification
+i	Ignore Casing	Makes the expression search case-insensitively.
+g	Global	Makes the expression search for all occurrences.
+s	Dot All	Makes the wild character . match newlines as well.
+m	Multiline	Makes the boundary characters ^ and $ match the beginning and ending of every single line instead of the beginning and ending of the whole string.
+y	Sticky	Makes the expression start its searching from the index indicated in its lastIndex property.
+u	Unicode	Makes the expression assume individual characters as code points, not code units, and thus match 32-bit characters as well.
 
 ### Grouping and Capturing
 Capturing groups are a way to treat multiple characters as a single unit. They are created by placing the characters to be grouped inside a set of parentheses. Groups use the ( ) symbols (like alternations, but the | symbol is not needed). They are useful for creating blocks of patterns, so you can apply repetitions or other modifiers to them as a whole. In the pattern ([a-x]{3}[0-9])+, the + metacharacter is applied to the whole group. Some of the sample groups given below:
@@ -212,4 +221,6 @@ console.log(match);
 
 ## Author
 
-A short section about the author with a link to the author's GitHub profile (replace with your information and a link to your profile)
+Rekha Leelaraman is a current student of Univerity of Toronto bootcamp. Her github profile is 
+
+https://github.com/RekhaLeelara
