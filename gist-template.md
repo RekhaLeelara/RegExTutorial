@@ -4,7 +4,7 @@ This tutorial helps to understand one of the frequetly used regular expressions,
 
 ## Summary
 
-We will use the following regex for our tutorial and the examples provide more insights.
+We will use the following regex for our tutorial and the examples provide more insights and better to understand each of the types.
 /^([a-z0-9_.-]+)@([\da-z.-]+).([a-z.]{2,6})$/
 
 ## Table of Contents
